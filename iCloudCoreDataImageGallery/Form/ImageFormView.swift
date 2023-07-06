@@ -11,6 +11,9 @@ import PhotosUI
 struct ImageFormView: View {
   @ObservedObject var viewModel: FormViewModel
   @StateObject var imagePicker = ImagePicker()
+  @FetchRequest(sortDescriptors: [])
+  private var myImages: FetchedResults<MyImage>
+  @Environment(\.managedObjectContext) var moc
   @Environment(\.dismiss) var dismiss
 
   var body: some View {
@@ -27,6 +30,21 @@ struct ImageFormView: View {
               .buttonStyle(.borderedProminent)
           }
           Button {
+            if viewModel.updating {
+              if let id = viewModel.id, let selectedImage = myImages.first(where: { $0.id == id }) {
+                selectedImage.name = viewModel.name
+                FileManager().saveImage(with: id, image: viewModel.uiImage)
+                if moc.hasChanges {
+                  try? moc.save()
+                }
+              }
+            } else {
+              let newImage = MyImage(context: moc)
+              newImage.id = UUID().uuidString
+              newImage.name = viewModel.name
+              try? moc.save()
+              FileManager().saveImage(with: newImage.imageID, image: viewModel.uiImage)
+            }
             dismiss()
           } label: {
             Image(systemName: "checkmark")
@@ -52,7 +70,12 @@ struct ImageFormView: View {
         if viewModel.updating {
           ToolbarItem(placement: .navigationBarTrailing) {
             Button {
-              
+              if let selectedImage = myImages.first(where: { $0.id == viewModel.id }) {
+                FileManager().deleteImage(with: selectedImage.imageID)
+                moc.delete(selectedImage)
+                try? moc.save()
+              }
+              dismiss()
             } label: {
               Image(systemName: "trash")
             }

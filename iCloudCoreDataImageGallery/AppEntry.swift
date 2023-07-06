@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct AppEntry: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-            .environment(\.managedObjectContext, MyImagesContainer().persistentContainer.viewContext)
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .environment(\.managedObjectContext, MyImagesContainer().persistentContainer.viewContext)
     }
+  }
 }

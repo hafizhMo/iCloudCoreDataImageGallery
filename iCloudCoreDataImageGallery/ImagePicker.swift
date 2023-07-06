@@ -10,7 +10,13 @@ import PhotosUI
 
 @MainActor
 class ImagePicker: ObservableObject {
-  @Published var imageSelection: PhotosPickerItem?
+  @Published var imageSelection: PhotosPickerItem? {
+    didSet {
+      Task {
+        try await loadTransferable(from:imageSelection)
+      }
+    }
+  }
   @Published var uiImage: UIImage?
   @Published var image: Image?
 

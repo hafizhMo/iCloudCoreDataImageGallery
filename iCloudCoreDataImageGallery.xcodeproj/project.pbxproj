@@ -17,6 +17,8 @@
 		FB0E68152A55BA1000AAF4F7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68142A55BA1000AAF4F7 /* ImagePicker.swift */; };
 		FB0E68182A55BD1200AAF4F7 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68172A55BD1200AAF4F7 /* FormViewModel.swift */; };
 		FB0E681C2A55BE2E00AAF4F7 /* ImageFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */; };
+		FB0E681E2A569CF000AAF4F7 /* FormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681D2A569CF000AAF4F7 /* FormType.swift */; };
+		FB0E68202A569DC500AAF4F7 /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		FB0E68142A55BA1000AAF4F7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		FB0E68172A55BD1200AAF4F7 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFormView.swift; sourceTree = "<group>"; };
+		FB0E681D2A569CF000AAF4F7 /* FormType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormType.swift; sourceTree = "<group>"; };
+		FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,13 +67,14 @@
 		FB0E67FD2A55B82B00AAF4F7 /* iCloudCoreDataImageGallery */ = {
 			isa = PBXGroup;
 			children = (
-				FB0E68162A55BD0300AAF4F7 /* Form */,
 				FB0E67FE2A55B82B00AAF4F7 /* AppEntry.swift */,
 				FB0E68002A55B82B00AAF4F7 /* ContentView.swift */,
 				FB0E68142A55BA1000AAF4F7 /* ImagePicker.swift */,
 				FB0E68022A55B82D00AAF4F7 /* Assets.xcassets */,
 				FB0E680C2A55B87200AAF4F7 /* CoreData */,
+				FB0E68162A55BD0300AAF4F7 /* Form */,
 				FB0E68042A55B82D00AAF4F7 /* Preview Content */,
+				FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */,
 			);
 			path = iCloudCoreDataImageGallery;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 			children = (
 				FB0E68172A55BD1200AAF4F7 /* FormViewModel.swift */,
 				FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */,
+				FB0E681D2A569CF000AAF4F7 /* FormType.swift */,
 			);
 			path = Form;
 			sourceTree = "<group>";
@@ -175,6 +181,8 @@
 				FB0E68012A55B82B00AAF4F7 /* ContentView.swift in Sources */,
 				FB0E68112A55B8D200AAF4F7 /* MyImagesContainer.swift in Sources */,
 				FB0E67FF2A55B82B00AAF4F7 /* AppEntry.swift in Sources */,
+				FB0E681E2A569CF000AAF4F7 /* FormType.swift in Sources */,
+				FB0E68202A569DC500AAF4F7 /* FileManager+Ext.swift in Sources */,
 				FB0E68152A55BA1000AAF4F7 /* ImagePicker.swift in Sources */,
 				FB0E68182A55BD1200AAF4F7 /* FormViewModel.swift in Sources */,
 				FB0E680F2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld in Sources */,
