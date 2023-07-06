@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB0E67FF2A55B82B00AAF4F7 /* iCloudCoreDataImageGalleryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E67FE2A55B82B00AAF4F7 /* iCloudCoreDataImageGalleryApp.swift */; };
+		FB0E67FF2A55B82B00AAF4F7 /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E67FE2A55B82B00AAF4F7 /* AppEntry.swift */; };
 		FB0E68012A55B82B00AAF4F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68002A55B82B00AAF4F7 /* ContentView.swift */; };
 		FB0E68032A55B82D00AAF4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0E68022A55B82D00AAF4F7 /* Assets.xcassets */; };
 		FB0E68062A55B82D00AAF4F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0E68052A55B82D00AAF4F7 /* Preview Assets.xcassets */; };
+		FB0E680F2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB0E680D2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld */; };
+		FB0E68112A55B8D200AAF4F7 /* MyImagesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68102A55B8D200AAF4F7 /* MyImagesContainer.swift */; };
+		FB0E68132A55B95B00AAF4F7 /* MyImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68122A55B95B00AAF4F7 /* MyImage+Ext.swift */; };
+		FB0E68152A55BA1000AAF4F7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68142A55BA1000AAF4F7 /* ImagePicker.swift */; };
+		FB0E68182A55BD1200AAF4F7 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68172A55BD1200AAF4F7 /* FormViewModel.swift */; };
+		FB0E681C2A55BE2E00AAF4F7 /* ImageFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB0E67FB2A55B82B00AAF4F7 /* iCloudCoreDataImageGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudCoreDataImageGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB0E67FE2A55B82B00AAF4F7 /* iCloudCoreDataImageGalleryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudCoreDataImageGalleryApp.swift; sourceTree = "<group>"; };
+		FB0E67FE2A55B82B00AAF4F7 /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		FB0E68002A55B82B00AAF4F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB0E68022A55B82D00AAF4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB0E68052A55B82D00AAF4F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB0E680E2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageGalleryDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FB0E68102A55B8D200AAF4F7 /* MyImagesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImagesContainer.swift; sourceTree = "<group>"; };
+		FB0E68122A55B95B00AAF4F7 /* MyImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyImage+Ext.swift"; sourceTree = "<group>"; };
+		FB0E68142A55BA1000AAF4F7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FB0E68172A55BD1200AAF4F7 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +63,12 @@
 		FB0E67FD2A55B82B00AAF4F7 /* iCloudCoreDataImageGallery */ = {
 			isa = PBXGroup;
 			children = (
-				FB0E67FE2A55B82B00AAF4F7 /* iCloudCoreDataImageGalleryApp.swift */,
+				FB0E68162A55BD0300AAF4F7 /* Form */,
+				FB0E67FE2A55B82B00AAF4F7 /* AppEntry.swift */,
 				FB0E68002A55B82B00AAF4F7 /* ContentView.swift */,
+				FB0E68142A55BA1000AAF4F7 /* ImagePicker.swift */,
 				FB0E68022A55B82D00AAF4F7 /* Assets.xcassets */,
+				FB0E680C2A55B87200AAF4F7 /* CoreData */,
 				FB0E68042A55B82D00AAF4F7 /* Preview Content */,
 			);
 			path = iCloudCoreDataImageGallery;
@@ -65,6 +80,25 @@
 				FB0E68052A55B82D00AAF4F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB0E680C2A55B87200AAF4F7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E680D2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld */,
+				FB0E68102A55B8D200AAF4F7 /* MyImagesContainer.swift */,
+				FB0E68122A55B95B00AAF4F7 /* MyImage+Ext.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FB0E68162A55BD0300AAF4F7 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E68172A55BD1200AAF4F7 /* FormViewModel.swift */,
+				FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +171,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0E681C2A55BE2E00AAF4F7 /* ImageFormView.swift in Sources */,
 				FB0E68012A55B82B00AAF4F7 /* ContentView.swift in Sources */,
-				FB0E67FF2A55B82B00AAF4F7 /* iCloudCoreDataImageGalleryApp.swift in Sources */,
+				FB0E68112A55B8D200AAF4F7 /* MyImagesContainer.swift in Sources */,
+				FB0E67FF2A55B82B00AAF4F7 /* AppEntry.swift in Sources */,
+				FB0E68152A55BA1000AAF4F7 /* ImagePicker.swift in Sources */,
+				FB0E68182A55BD1200AAF4F7 /* FormViewModel.swift in Sources */,
+				FB0E680F2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld in Sources */,
+				FB0E68132A55B95B00AAF4F7 /* MyImage+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +379,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB0E680D2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB0E680E2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodel */,
+			);
+			currentVersion = FB0E680E2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodel */;
+			path = ImageGalleryDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FB0E67F32A55B82B00AAF4F7 /* Project object */;
 }
