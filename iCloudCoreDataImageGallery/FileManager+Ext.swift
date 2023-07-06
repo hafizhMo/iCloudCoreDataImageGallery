@@ -46,4 +46,12 @@ extension FileManager {
     }
   }
 
+  func saveJSON(_ json: String, fileName: String) {
+    let url = URL.documentsDirectory.appending(path: fileName)
+    do {
+      try json.write(to: url, atomically: false, encoding: .utf8)
+    } catch {
+      print("Could not save json")
+    }
+  }
 }

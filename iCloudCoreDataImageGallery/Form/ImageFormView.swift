@@ -9,12 +9,15 @@ import SwiftUI
 import PhotosUI
 
 struct ImageFormView: View {
+  @EnvironmentObject var shareService: ShareService
   @ObservedObject var viewModel: FormViewModel
   @StateObject var imagePicker = ImagePicker()
   @FetchRequest(sortDescriptors: [])
   private var myImages: FetchedResults<MyImage>
   @Environment(\.managedObjectContext) var moc
   @Environment(\.dismiss) var dismiss
+  @State private var share = false
+  @State private var name = ""
 
   var body: some View {
     NavigationStack {
@@ -23,6 +26,31 @@ struct ImageFormView: View {
           .resizable()
           .scaledToFit()
         TextField("Image Name", text: $viewModel.name)
+        TextField("Comment", text: $viewModel.comment, axis: .vertical)
+
+        HStack {
+          Text("Date Taken")
+          Spacer()
+          if viewModel.dateHidden {
+            Text("No Date")
+            Button("Set Date") {
+              viewModel.date = Date()
+            }
+          } else {
+            HStack {
+              DatePicker("", selection: $viewModel.date, in: ...Date(), displayedComponents: .date)
+              Button("Clear date") {
+                viewModel.date = Date.distantPast
+              }
+            }
+          }
+        }
+        .padding()
+        .buttonStyle(.bordered)
+
+        if !viewModel.receivedFrom.isEmpty {
+          Text("**Received From**: \(viewModel.receivedFrom)")
+        }
 
         HStack {
           if viewModel.updating {
@@ -33,6 +61,8 @@ struct ImageFormView: View {
             if viewModel.updating {
               if let id = viewModel.id, let selectedImage = myImages.first(where: { $0.id == id }) {
                 selectedImage.name = viewModel.name
+                selectedImage.comment = viewModel.comment
+                selectedImage.dateTaken = viewModel.date
                 FileManager().saveImage(with: id, image: viewModel.uiImage)
                 if moc.hasChanges {
                   try? moc.save()
@@ -42,6 +72,8 @@ struct ImageFormView: View {
               let newImage = MyImage(context: moc)
               newImage.id = UUID().uuidString
               newImage.name = viewModel.name
+              newImage.comment = viewModel.comment
+              newImage.dateTaken = viewModel.date
               try? moc.save()
               FileManager().saveImage(with: newImage.imageID, image: viewModel.uiImage)
             }
@@ -57,6 +89,8 @@ struct ImageFormView: View {
         Spacer()
       }
       .padding()
+      .textFieldStyle(.roundedBorder)
+      .disabled(!viewModel.receivedFrom.isEmpty)
       .navigationTitle(viewModel.updating ? "Update Image" : "New Image")
       .navigationBarTitleDisplayMode(.inline)
       .toolbar {
@@ -69,18 +103,26 @@ struct ImageFormView: View {
         
         if viewModel.updating {
           ToolbarItem(placement: .navigationBarTrailing) {
-            Button {
-              if let selectedImage = myImages.first(where: { $0.id == viewModel.id }) {
-                FileManager().deleteImage(with: selectedImage.imageID)
-                moc.delete(selectedImage)
-                try? moc.save()
+            HStack {
+              Button {
+                if let selectedImage = myImages.first(where: { $0.id == viewModel.id }) {
+                  FileManager().deleteImage(with: selectedImage.imageID)
+                  moc.delete(selectedImage)
+                  try? moc.save()
+                }
+                dismiss()
+              } label: {
+                Image(systemName: "trash")
               }
-              dismiss()
-            } label: {
-              Image(systemName: "trash")
+              .buttonStyle(.borderedProminent)
+              .tint(.red)
+
+              Button {
+                share.toggle()
+              } label: {
+                Image(systemName: "square.and.arrow.up")
+              }
             }
-            .buttonStyle(.borderedProminent)
-            .tint(.red)
           }
         }
       }
@@ -88,6 +130,20 @@ struct ImageFormView: View {
         if let newImage {
           viewModel.uiImage = newImage
         }
+      }
+      .alert("Your Name", isPresented: $share) {
+        TextField("Your Name", text: $name)
+        Button("OK") {
+          if let id = viewModel.id {
+            viewModel.receivedFrom = viewModel.receivedFrom.isEmpty ? name : viewModel.receivedFrom + " -> " + name
+            let codableImage = CodableImage(comment: viewModel.comment, dateTaken: viewModel.date, id: id, name: viewModel.name, receivedFrom: viewModel.receivedFrom)
+            shareService.saveMyImage(codableImage)
+          }
+          dismiss()
+        }
+        Button("Cancel", role: .cancel) {}
+      } message: {
+        Text("Please enter your name.")
       }
     }
   }

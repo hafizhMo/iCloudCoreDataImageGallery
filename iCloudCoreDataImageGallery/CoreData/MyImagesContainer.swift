@@ -13,6 +13,14 @@ class MyImagesContainer {
 
   init() {
     persistentContainer = NSPersistentContainer(name: "ImageGalleryDataModel")
+    guard let path = persistentContainer
+      .persistentStoreDescriptions
+      .first?
+      .url?
+      .path else {
+      fatalError("Could not find peresistent container")
+    }
+    print("Core Data", path)
     persistentContainer.loadPersistentStores { _, error in
       if let error {
         print(error.localizedDescription)

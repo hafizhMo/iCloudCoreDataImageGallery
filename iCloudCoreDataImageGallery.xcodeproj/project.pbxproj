@@ -19,6 +19,7 @@
 		FB0E681C2A55BE2E00AAF4F7 /* ImageFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */; };
 		FB0E681E2A569CF000AAF4F7 /* FormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681D2A569CF000AAF4F7 /* FormType.swift */; };
 		FB0E68202A569DC500AAF4F7 /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */; };
+		FB0E68222A56F28900AAF4F7 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68212A56F28900AAF4F7 /* ShareService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,9 @@
 		FB0E681B2A55BE2E00AAF4F7 /* ImageFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFormView.swift; sourceTree = "<group>"; };
 		FB0E681D2A569CF000AAF4F7 /* FormType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormType.swift; sourceTree = "<group>"; };
 		FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
+		FB0E68212A56F28900AAF4F7 /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
+		FB0E68232A57143600AAF4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FB0E68282A5715AD00AAF4F7 /* icon-doc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-doc.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,14 +71,17 @@
 		FB0E67FD2A55B82B00AAF4F7 /* iCloudCoreDataImageGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FB0E68232A57143600AAF4F7 /* Info.plist */,
+				FB0E68282A5715AD00AAF4F7 /* icon-doc.png */,
 				FB0E67FE2A55B82B00AAF4F7 /* AppEntry.swift */,
 				FB0E68002A55B82B00AAF4F7 /* ContentView.swift */,
+				FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */,
 				FB0E68142A55BA1000AAF4F7 /* ImagePicker.swift */,
+				FB0E68212A56F28900AAF4F7 /* ShareService.swift */,
 				FB0E68022A55B82D00AAF4F7 /* Assets.xcassets */,
 				FB0E680C2A55B87200AAF4F7 /* CoreData */,
 				FB0E68162A55BD0300AAF4F7 /* Form */,
 				FB0E68042A55B82D00AAF4F7 /* Preview Content */,
-				FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */,
 			);
 			path = iCloudCoreDataImageGallery;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 			files = (
 				FB0E681C2A55BE2E00AAF4F7 /* ImageFormView.swift in Sources */,
 				FB0E68012A55B82B00AAF4F7 /* ContentView.swift in Sources */,
+				FB0E68222A56F28900AAF4F7 /* ShareService.swift in Sources */,
 				FB0E68112A55B8D200AAF4F7 /* MyImagesContainer.swift in Sources */,
 				FB0E67FF2A55B82B00AAF4F7 /* AppEntry.swift in Sources */,
 				FB0E681E2A569CF000AAF4F7 /* FormType.swift in Sources */,
@@ -318,11 +326,14 @@
 				DEVELOPMENT_TEAM = Z824M97CF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iCloudCoreDataImageGallery/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,11 +358,14 @@
 				DEVELOPMENT_TEAM = Z824M97CF2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iCloudCoreDataImageGallery/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
