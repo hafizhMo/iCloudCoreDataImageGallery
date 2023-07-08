@@ -21,6 +21,8 @@
 		FB0E68202A569DC500AAF4F7 /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */; };
 		FB0E68222A56F28900AAF4F7 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68212A56F28900AAF4F7 /* ShareService.swift */; };
 		FBF2070D2A59527100C4AACE /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FBF2070C2A59527100C4AACE /* ZIPFoundation */; };
+		FBF207102A595B3F00C4AACE /* EmailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF2070F2A595B3F00C4AACE /* EmailForm.swift */; };
+		FBF207122A595B5900C4AACE /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF207112A595B5900C4AACE /* EmailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		FB0E68212A56F28900AAF4F7 /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 		FB0E68232A57143600AAF4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FB0E68282A5715AD00AAF4F7 /* icon-doc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-doc.png"; sourceTree = "<group>"; };
+		FBF2070F2A595B3F00C4AACE /* EmailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailForm.swift; sourceTree = "<group>"; };
+		FBF207112A595B5900C4AACE /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				FB0E68022A55B82D00AAF4F7 /* Assets.xcassets */,
 				FB0E680C2A55B87200AAF4F7 /* CoreData */,
 				FB0E68162A55BD0300AAF4F7 /* Form */,
+				FBF2070E2A595B2500C4AACE /* Mail */,
 				FB0E68042A55B82D00AAF4F7 /* Preview Content */,
 			);
 			path = iCloudCoreDataImageGallery;
@@ -114,6 +119,15 @@
 				FB0E681D2A569CF000AAF4F7 /* FormType.swift */,
 			);
 			path = Form;
+			sourceTree = "<group>";
+		};
+		FBF2070E2A595B2500C4AACE /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				FBF2070F2A595B3F00C4AACE /* EmailForm.swift */,
+				FBF207112A595B5900C4AACE /* EmailView.swift */,
+			);
+			path = Mail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,12 +206,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF207122A595B5900C4AACE /* EmailView.swift in Sources */,
 				FB0E681C2A55BE2E00AAF4F7 /* ImageFormView.swift in Sources */,
 				FB0E68012A55B82B00AAF4F7 /* ContentView.swift in Sources */,
 				FB0E68222A56F28900AAF4F7 /* ShareService.swift in Sources */,
 				FB0E68112A55B8D200AAF4F7 /* MyImagesContainer.swift in Sources */,
 				FB0E67FF2A55B82B00AAF4F7 /* AppEntry.swift in Sources */,
 				FB0E681E2A569CF000AAF4F7 /* FormType.swift in Sources */,
+				FBF207102A595B3F00C4AACE /* EmailForm.swift in Sources */,
 				FB0E68202A569DC500AAF4F7 /* FileManager+Ext.swift in Sources */,
 				FB0E68152A55BA1000AAF4F7 /* ImagePicker.swift in Sources */,
 				FB0E68182A55BD1200AAF4F7 /* FormViewModel.swift in Sources */,
