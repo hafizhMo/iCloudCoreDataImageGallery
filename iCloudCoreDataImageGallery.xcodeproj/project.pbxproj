@@ -20,6 +20,7 @@
 		FB0E681E2A569CF000AAF4F7 /* FormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681D2A569CF000AAF4F7 /* FormType.swift */; };
 		FB0E68202A569DC500AAF4F7 /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */; };
 		FB0E68222A56F28900AAF4F7 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68212A56F28900AAF4F7 /* ShareService.swift */; };
+		FBF2070D2A59527100C4AACE /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FBF2070C2A59527100C4AACE /* ZIPFoundation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF2070D2A59527100C4AACE /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +132,9 @@
 			dependencies = (
 			);
 			name = iCloudCoreDataImageGallery;
+			packageProductDependencies = (
+				FBF2070C2A59527100C4AACE /* ZIPFoundation */,
+			);
 			productName = iCloudCoreDataImageGallery;
 			productReference = FB0E67FB2A55B82B00AAF4F7 /* iCloudCoreDataImageGallery.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +163,9 @@
 				Base,
 			);
 			mainGroup = FB0E67F22A55B82B00AAF4F7;
+			packageReferences = (
+				FBF2070B2A59527100C4AACE /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			productRefGroup = FB0E67FC2A55B82B00AAF4F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -401,6 +409,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBF2070B2A59527100C4AACE /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBF2070C2A59527100C4AACE /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBF2070B2A59527100C4AACE /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FB0E680D2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld */ = {
