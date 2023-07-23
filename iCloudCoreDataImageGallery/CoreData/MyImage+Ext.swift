@@ -17,11 +17,7 @@ extension MyImage {
   }
 
   var uiImage: UIImage {
-    if !imageID.isEmpty, let image = FileManager().retrieveImage(with: imageID) {
-      return image
-    } else {
-      return UIImage(systemName: "photo")!
-    }
+    image ?? UIImage(systemName: "photo")!
   }
 
   var commentView: String {

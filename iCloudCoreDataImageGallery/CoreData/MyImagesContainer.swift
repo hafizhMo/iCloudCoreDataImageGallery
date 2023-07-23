@@ -12,6 +12,7 @@ class MyImagesContainer {
   let persistentContainer: NSPersistentContainer
 
   init() {
+    UIImageTransformer.register()
     persistentContainer = NSPersistentContainer(name: "ImageGalleryDataModel")
     guard let path = persistentContainer
       .persistentStoreDescriptions

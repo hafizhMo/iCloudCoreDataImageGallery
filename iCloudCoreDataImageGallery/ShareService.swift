@@ -7,6 +7,7 @@
 
 import Foundation
 import ZIPFoundation
+import UIKit
 
 struct CodableImage: Codable, Equatable {
   let comment: String
@@ -19,12 +20,13 @@ struct CodableImage: Codable, Equatable {
 class ShareService: ObservableObject {
   @Published var codeableImage: CodableImage?
   static let ext = "myimg"
-  func saveMyImage(_ codableImage: CodableImage) {
+  func saveMyImage(_ codableImage: CodableImage, uiImage: UIImage) {
     let filename = "\(codableImage.id).json"
     do {
       let data = try JSONEncoder().encode(codableImage)
       let jsonString = String(decoding: data, as: UTF8.self)
       FileManager().saveJSON(jsonString, fileName: filename)
+      FileManager().saveImage(with: codableImage.id, image: uiImage)
       zipFiles(id: codableImage.id)
     } catch {
       print("Could not encode data")
@@ -66,6 +68,7 @@ class ShareService: ObservableObject {
       try archive.addEntry(with: imageURL.lastPathComponent, relativeTo: URL.documentsDirectory)
       try archive.addEntry(with: jsonURL.lastPathComponent, relativeTo: URL.documentsDirectory)
       try FileManager().removeItem(at: jsonURL)
+      try FileManager().removeItem(at: imageURL)
     } catch {
       print(error.localizedDescription)
     }

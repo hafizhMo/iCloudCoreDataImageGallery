@@ -80,25 +80,35 @@ struct ContentView: View {
 
   func restoreMyImage() {
     if let codableImage = shareService.codeableImage {
+      let imgURL = URL.documentsDirectory.appending(path: "\(codableImage.id).jpg")
       let newImage = MyImage(context: moc)
+      if let data = try? Data(contentsOf: imgURL), let uiImage = UIImage(data: data) {
+        newImage.image = uiImage
+      }
       newImage.name = codableImage.name
       newImage.id = codableImage.id
       newImage.comment = codableImage.comment
       newImage.dateTaken = codableImage.dateTaken
       newImage.receivedFrom = codableImage.receivedFrom
       try? moc.save()
+      try? FileManager().removeItem(at: imgURL)
     }
     shareService.codeableImage = nil
   }
 
   func updateImageInfo(myImage: MyImage) {
     if let codableImage = shareService.codeableImage {
+      let imgURL = URL.documentsDirectory.appending(path: "\(codableImage.id).jpg")
+      if let data = try? Data(contentsOf: imgURL), let uiImage = UIImage(data: data) {
+        myImage.image = uiImage
+      }
       myImage.name = codableImage.name
       myImage.id = codableImage.id
       myImage.comment = codableImage.comment
       myImage.dateTaken = codableImage.dateTaken
       myImage.receivedFrom = codableImage.receivedFrom
       try? moc.save()
+      try? FileManager().removeItem(at: imgURL)
     }
     shareService.codeableImage = nil
   }

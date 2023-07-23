@@ -20,6 +20,9 @@
 		FB0E681E2A569CF000AAF4F7 /* FormType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681D2A569CF000AAF4F7 /* FormType.swift */; };
 		FB0E68202A569DC500AAF4F7 /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E681F2A569DC500AAF4F7 /* FileManager+Ext.swift */; };
 		FB0E68222A56F28900AAF4F7 /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E68212A56F28900AAF4F7 /* ShareService.swift */; };
+		FB98DE992A6D4B8600311C6E /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98DE982A6D4B8600311C6E /* UIImageTransformer.swift */; };
+		FB98DE9C2A6D4BF300311C6E /* MyImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98DE9A2A6D4BF300311C6E /* MyImage+CoreDataClass.swift */; };
+		FB98DE9D2A6D4BF300311C6E /* MyImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB98DE9B2A6D4BF300311C6E /* MyImage+CoreDataProperties.swift */; };
 		FBF2070D2A59527100C4AACE /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = FBF2070C2A59527100C4AACE /* ZIPFoundation */; };
 		FBF207102A595B3F00C4AACE /* EmailForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF2070F2A595B3F00C4AACE /* EmailForm.swift */; };
 		FBF207122A595B5900C4AACE /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF207112A595B5900C4AACE /* EmailView.swift */; };
@@ -42,6 +45,9 @@
 		FB0E68212A56F28900AAF4F7 /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 		FB0E68232A57143600AAF4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FB0E68282A5715AD00AAF4F7 /* icon-doc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-doc.png"; sourceTree = "<group>"; };
+		FB98DE982A6D4B8600311C6E /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
+		FB98DE9A2A6D4BF300311C6E /* MyImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FB98DE9B2A6D4BF300311C6E /* MyImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FBF2070F2A595B3F00C4AACE /* EmailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailForm.swift; sourceTree = "<group>"; };
 		FBF207112A595B5900C4AACE /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,9 +110,12 @@
 		FB0E680C2A55B87200AAF4F7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				FB98DE9A2A6D4BF300311C6E /* MyImage+CoreDataClass.swift */,
+				FB98DE9B2A6D4BF300311C6E /* MyImage+CoreDataProperties.swift */,
 				FB0E680D2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld */,
 				FB0E68102A55B8D200AAF4F7 /* MyImagesContainer.swift */,
 				FB0E68122A55B95B00AAF4F7 /* MyImage+Ext.swift */,
+				FB98DE982A6D4B8600311C6E /* UIImageTransformer.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBF207122A595B5900C4AACE /* EmailView.swift in Sources */,
+				FB98DE9C2A6D4BF300311C6E /* MyImage+CoreDataClass.swift in Sources */,
 				FB0E681C2A55BE2E00AAF4F7 /* ImageFormView.swift in Sources */,
 				FB0E68012A55B82B00AAF4F7 /* ContentView.swift in Sources */,
 				FB0E68222A56F28900AAF4F7 /* ShareService.swift in Sources */,
@@ -219,6 +229,8 @@
 				FB0E68182A55BD1200AAF4F7 /* FormViewModel.swift in Sources */,
 				FB0E680F2A55B89400AAF4F7 /* ImageGalleryDataModel.xcdatamodeld in Sources */,
 				FB0E68132A55B95B00AAF4F7 /* MyImage+Ext.swift in Sources */,
+				FB98DE9D2A6D4BF300311C6E /* MyImage+CoreDataProperties.swift in Sources */,
+				FB98DE992A6D4B8600311C6E /* UIImageTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
