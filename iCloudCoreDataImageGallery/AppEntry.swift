@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct AppEntry: App {
   @StateObject var shareService = ShareService()
-  let moc = MyImagesContainer().persistentContainer.viewContext
+  let moc = MyImagesContainer().persistentCloudKitContainer.viewContext
   var body: some Scene {
     WindowGroup {
       ContentView()

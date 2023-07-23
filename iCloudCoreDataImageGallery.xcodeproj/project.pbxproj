@@ -48,6 +48,7 @@
 		FB98DE982A6D4B8600311C6E /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
 		FB98DE9A2A6D4BF300311C6E /* MyImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FB98DE9B2A6D4BF300311C6E /* MyImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FB98DE9E2A6D5C7900311C6E /* iCloudCoreDataImageGallery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloudCoreDataImageGallery.entitlements; sourceTree = "<group>"; };
 		FBF2070F2A595B3F00C4AACE /* EmailForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailForm.swift; sourceTree = "<group>"; };
 		FBF207112A595B5900C4AACE /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +84,7 @@
 		FB0E67FD2A55B82B00AAF4F7 /* iCloudCoreDataImageGallery */ = {
 			isa = PBXGroup;
 			children = (
+				FB98DE9E2A6D5C7900311C6E /* iCloudCoreDataImageGallery.entitlements */,
 				FB0E68232A57143600AAF4F7 /* Info.plist */,
 				FB0E68282A5715AD00AAF4F7 /* icon-doc.png */,
 				FB0E67FE2A55B82B00AAF4F7 /* AppEntry.swift */,
@@ -356,6 +358,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iCloudCoreDataImageGallery/iCloudCoreDataImageGallery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iCloudCoreDataImageGallery/Preview Content\"";
@@ -388,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iCloudCoreDataImageGallery/iCloudCoreDataImageGallery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iCloudCoreDataImageGallery/Preview Content\"";
